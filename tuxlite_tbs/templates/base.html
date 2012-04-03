@@ -1,22 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>{% block windowtitle %}{{ SITENAME }}{% endblock %}</title>
     <meta name="description" content="">
     <meta name="author" content="{{ AUTHOR }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-    <script src="{{ SITEURL }}/theme/html5.js"></script>
+    <script src="{{ SITEURL }}/theme/js/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
-    <link href="{{ SITEURL }}/theme/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/pygments.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/all.4d333090fa71bbe9e13d2b39a49136a8fc67abf2.css" rel="stylesheet">
 
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ SITEURL }}/{{ FEED }}">
+    {% if FEED_RSS %}
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ SITEURL }}/{{ FEED_RSS }}">
+    {% endif %}
 </head>
 
 <body>
@@ -134,7 +134,7 @@
 
 </div> <!-- /container -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
+<script src="{{ SITEURL }}/theme/js/bootstrap-collapse.2.0.2.min.js"></script>
 {% include "analytics.html" %}
 {% include "github.html" %} 
 </body>
