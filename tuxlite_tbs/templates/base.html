@@ -44,6 +44,12 @@
             <li><a href="{{ SITEURL }}/pages/{{ page.url }}">{{ page.title }}</a></li>
         {% endfor %}
         {% endif %}
+
+        {% if categories and SHOW_CATEGORIES_IN_MENU %}
+            {% for cat, null in categories %}
+                <li><a href="{{ SITEURL }}/category/{{ cat }}.html">{{ cat }}</a></li>
+            {% endfor %}                   
+        {% endif %}
         </ul>
         </div>
         
